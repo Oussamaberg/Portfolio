@@ -46,7 +46,7 @@ function Hero() {
           }}
           className="absolute top-20 left-1/3 bg-yellow-300   blur-3xl rounded-full w-40 h-40"
         ></motion.div>
-        <div className="text-5xl mt-10 md:text-7xl sm:mt-0">
+        <div className="text-5xl mt-20 md:text-7xl sm:mt-20">
           <h1 className=" ">
             {" "}
             <motion.div
@@ -60,7 +60,7 @@ function Hero() {
               Say Hi from Oussama,
             </motion.div>{" "}
           </h1>
-          <div className="absolute bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
+          <div className="absolute text-4xl bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
             <span>Front-End Developer.</span>
           </div>
         </div>
@@ -71,12 +71,12 @@ function Hero() {
             duration: 0.5,
             delay: 1,
           }}
-          className="absolute w-full top-40 px-16 sm:top-28 md:top-40 lg:w-auto text-sm text-slate-400 sm:px-32 md:px-40"
+          className="absolute w-full top-48 px-16 sm:top-30 md:top-56 lg:w-auto  text-slate-400 sm:px-32 md:px-40"
         >
           I am deeply passionate about coding and take immense pleasure in
           creating elegant and visually captivating solutions.
         </motion.div>
-        <div className="absolute flex gap-4 top-60 font-thin">
+        <div className="absolute flex gap-4 top-72 font-thin">
           <Badge>
             <div className="text-3xl">+4</div>
             <div className=" text-xs px-4   ">Yers of experience</div>

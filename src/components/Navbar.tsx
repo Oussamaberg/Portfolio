@@ -27,7 +27,7 @@ function Navbar() {
             Linkdin
           </span>
           <span className="hover:bg-blue-400 p-1 rounded-xl hover:shadow-lg hover:text-darkgray font-bold hover:shadow-blue-300/50 transition duration-700  cursor-pointer">
-            Tweeter
+            Twitter
           </span>
           <span className="hover:bg-slate-300 p-1 rounded-xl hover:shadow-lg hover:text-darkgray font-bold hover:shadow-slate-300/50 transition duration-700  cursor-pointer">
             Github
