@@ -1,20 +1,24 @@
 import { motion } from "framer-motion";
 import Badge from "./Badge";
+import { useScroll, useTransform } from "framer-motion";
 
 motion;
 function Hero() {
+  let { scrollYProgress } = useScroll();
+  let y = useTransform(scrollYProgress, [0, 1], [0, 300])
   return (
     <>
       <div className="flex relative  justify-center items-end mt-80 px-5">
-        <div className="absolute left-14 sm:left-auto -top-64 bg-green-300 blur-md rounded-full h-64 w-64"></div>
-        <div className="  absolute z-50 left-14 sm:left-auto -top-64 bg-cover rounded-full bg-profile-bg w-64 h-64 ">
+        <motion.div style={{y}} className="absolute z-0 left-14 sm:left-auto -top-64 bg-green-300 blur-xs rounded-full h-64 w-64"></motion.div>
+        <motion.div style={{y}}  className="  absolute z-0 left-14 sm:left-auto -top-64 bg-cover rounded-full bg-profile-bg w-64 h-64 ">
           {" "}
-        </div>
+        </motion.div>
         <motion.div
+          
           initial={{ x: 0, y: 0 }}
           animate={{
-            x: [0, -100, 100, 200, 100, 0],
-            y: [0, -100, -200, -300, -200, -100, 0],
+            x: [0, -100,0, 100, 200, 100, 0],
+            y: [0, -100, -200, -100, 0],
           }}
           transition={{
             duration: 20,
@@ -46,7 +50,7 @@ function Hero() {
           }}
           className="absolute top-20 left-1/3 bg-yellow-300   blur-3xl rounded-full w-40 h-40"
         ></motion.div>
-        <div className="text-5xl mt-20 md:text-7xl sm:mt-20">
+        <div className="text-5xl mt-20 z-10 md:text-7xl sm:mt-20">
           <h1 className=" ">
             {" "}
             <motion.div
@@ -55,18 +59,19 @@ function Hero() {
               transition={{
                 duration: 1,
               }}
-              className=" bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500 h-max "
+              className="green-grad "
             >
               Say Hi from Oussama,
             </motion.div>{" "}
           </h1>
-          <div className="absolute text-4xl bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
+          <div className="absolute text-4xl green-grad">
             <span>Front-End Developer.</span>
           </div>
         </div>
         <motion.div
+        
           initial={{ opacity: 0, scale: 1 }}
-          animate={{ opacity: 1, scale: 1 }}
+          animate={{ opacity: 1, scale: 1}}
           transition={{
             duration: 0.5,
             delay: 1,

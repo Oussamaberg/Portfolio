@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.green-grad{
+    @apply  bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-indigo-500
+}
