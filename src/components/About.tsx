@@ -47,6 +47,7 @@ function About() {
           ease: "easeOut",
           delay: 0.3,
         }}
+        viewport={{ once: true }}
         className=" text-3xl px-5 pt-20 md:text-center  xl:w-2/3 font-semibold text-gray-400"
       >
         
