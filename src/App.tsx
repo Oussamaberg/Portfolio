@@ -5,6 +5,7 @@ import About from "./components/About"
 import VerticalSlide from "./components/VerticalSlide"
 import Specializations from "./components/Specializations"
 import Tech from "./components/Tech"
+import Projects from "./components/Porojects"
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Section><VerticalSlide/></Section>
       <Section><Specializations /></Section>
       <Section><Tech/></Section>
+      <Section><Projects /></Section>
       <Section></Section>
     </div>
     </>
