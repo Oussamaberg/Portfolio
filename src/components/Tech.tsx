@@ -9,7 +9,7 @@ import { useScroll, useTransform } from "framer-motion";
 
 function Tech() {
   let { scrollYProgress } = useScroll();
-  let y = useTransform(scrollYProgress, [0, 1], [0, 500]);
+  let y = useTransform(scrollYProgress, [0, 1], [0, 700]);
   return (
     <div className="relative flex flex-col justify-center items-center  mt-[250px]  md:mt-70 p-2">
       <motion.div

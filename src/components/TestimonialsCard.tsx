@@ -7,7 +7,7 @@ function TestimonialsCard({name, img, position, company, project,index, text, mo
     console.log(move)
     useEffect(() => {
         controlsText.start({ x:(move == "right")?[-20,0]:[20,0], opacity: [0,1] })
-        controlsImg.start({opacity: [0,1],y:[20,0],x:[-10,0] })
+        controlsImg.start({opacity: [0,1],y:[20,0],x:(move == "right")?[-10,0]:[10,0] })
       }, [index])
   return (
     <motion.div 
@@ -16,12 +16,14 @@ function TestimonialsCard({name, img, position, company, project,index, text, mo
     transition={{
         duration:0.8,
     }}
+    viewport={{ once: true }}
     className=" p-5 absolute -left-[270px] flex flex-col top-10 w-[500px] h-[200px] border-green-400 border-[1px] rounded-3xl">
       <motion.div
       animate={controlsImg}
       transition={{
-          duration:0.7,
-          type:"tween"
+        duration:0.5,
+        type: "tween",
+     ease: "easeIn"
       }}
          className="flex  gap-4 items-center">
         <span className="rounded-full">
@@ -40,9 +42,11 @@ function TestimonialsCard({name, img, position, company, project,index, text, mo
        initial={{opacity:0}}
        animate={controlsText}
        transition={{
-           duration:0.7,
-           type:"tween"
+           duration:0.5,
+           type: "tween",
+        ease: "easeIn"
        }}
+    
       className="py-2 font-serif">
         "{text}"
       </motion.div>

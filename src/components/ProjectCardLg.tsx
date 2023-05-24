@@ -19,6 +19,7 @@ function ProjectCardLg({
     initial={{y:50, opacity:0}}
     whileInView={{y:0, opacity:1}}
     transition={{duration:1}}
+    viewport={{ once: true }}
     className={Class}>
       <div className="absolute inset-0 opacity-0 hover:opacity-100 bg-green-400/50 rounded-3xl    backdrop-blur-md flex items-center justify-center gap-4 transition duration-700">
         <a href={url}>

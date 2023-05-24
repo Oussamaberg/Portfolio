@@ -7,6 +7,7 @@ import Specializations from "./components/Specializations"
 import Tech from "./components/Tech"
 import Projects from "./components/Porojects"
 import Testimonials from "./components/Testimonials"
+import Contact from "./components/Contact"
 
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
       <Section><Tech/></Section>
       <Section><Projects /></Section>
       <Section><Testimonials/></Section>
-      <Section></Section>
+      <Section><Contact /></Section>
     </div>
     </>
   )

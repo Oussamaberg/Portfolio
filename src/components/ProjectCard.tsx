@@ -18,11 +18,13 @@ function ProjectCard({
   return (
     <div>
     <motion.div 
-    initial={{x:(position=="left")?-200:200,opacity:0}}
+    initial={{x:(position=="left")?-200:-400,opacity:0}}
     whileInView={{x:0, opacity:1}}
     transition={{ 
-        duration:0.5,
+        duration:0.8,
+        delay:0.5
     }}
+    viewport={{ once: true }}
     className={Class}>
       <div className="absolute inset-0 opacity-0 hover:opacity-100 bg-green-400/50 rounded-3xl    backdrop-blur-md flex items-center justify-center gap-4 transition duration-700">
         <a href={url}>

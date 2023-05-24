@@ -5,26 +5,24 @@ import user3 from "../assets/img/user3.jpg";
 import TestimonialsCard from "./TestimonialsCard";
 import { useState } from "react";
 function Testimonials() {
-    const [index, setIndex] = useState(2)
-    const  [moveTo, setMoveTo] = useState("right")
-    const arrowLeft = () => {
-        if(index == 0){
-            setIndex(2);
-        }else{
-            setIndex((index) => index - 1);
-        }
-        setMoveTo("left")
-
+  const [index, setIndex] = useState(2);
+  const [moveTo, setMoveTo] = useState("right");
+  const arrowLeft = () => {
+    if (index == 0) {
+      setIndex(2);
+    } else {
+      setIndex((index) => index - 1);
     }
-    const arrowRight = () => {
-        if(index == 2){
-            setIndex(0);
-        }else{
-            setIndex((index) => index + 1);
-        }
-        setMoveTo("right")
-
+    setMoveTo("left");
+  };
+  const arrowRight = () => {
+    if (index == 2) {
+      setIndex(0);
+    } else {
+      setIndex((index) => index + 1);
     }
+    setMoveTo("right");
+  };
   const data = [
     {
       name: "Paul kidman",
@@ -32,24 +30,24 @@ function Testimonials() {
       position: "CEO of",
       company: "IBM",
       project: "",
-      text: "He is very help full and he knows how to deliver breath catching user interface,i loved working with him do much"
+      text: "He is very help full and he knows how to deliver breath catching user interface,i loved working with him do much",
     },
     {
-        name: "maria garcia",
-        img: user2,
-        position: "manager at",
-        company: "Google",
-        project: "",
-        text: "Oussama is highly professional and easy to communicate with. He answered all my questions along the way. Will be working with him again I hope!"
-      },
-      {
-        name: "jesus Walker",
-        img: user3,
-        position: "Full stack dev at",
-        company: "Apple",
-        project: "",
-        text: "I've been working with Oussama on an urgent project. He was quick to respond and had what I needed done within a very short period of time and then some."
-      },
+      name: "maria garcia",
+      img: user2,
+      position: "manager at",
+      company: "Google",
+      project: "",
+      text: "Oussama is highly professional and easy to communicate with. He answered all my questions along the way. Will be working with him again I hope!",
+    },
+    {
+      name: "jesus Walker",
+      img: user3,
+      position: "Full stack dev at",
+      company: "Apple",
+      project: "",
+      text: "I've been working with Oussama on an urgent project. He was quick to respond and had what I needed done within a very short period of time and then some.",
+    },
   ];
 
   return (
@@ -67,25 +65,27 @@ function Testimonials() {
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            strokeWidth="1.5"
+            stroke-width="1.5"
             stroke="currentColor"
             className="w-6 h-6"
           >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
+              d="M8.625 9.75a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 01.778-.332 48.294 48.294 0 005.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"
             />
           </svg>
         </span>
         <span className="">Testimonials</span>
       </motion.div>
-      <div className="  green-grad text-5xl xl:text-6xl pb-20">
+      <div className="green-grad text-5xl xl:text-6xl pb-20">
         Trusted by Hundred Clients
       </div>
       <div className="relative flex flex-col">
-        <div className=" absolute -left-[270px] font-seri text-lg underline decoration-green-400">Testimonials</div>
-     
+        <div className=" absolute -left-[270px] font-seri text-lg underline decoration-green-400">
+          Testimonials
+        </div>
+
         <TestimonialsCard
           name={data[index].name}
           img={data[index].img}
@@ -96,16 +96,19 @@ function Testimonials() {
           text={data[index].text}
           move={moveTo}
         />
-        <motion.div 
-         initial={{y:50, opacity:0}}
-         whileInView={{y:0, opacity:1}}
-         transition={{
-             duration:0.8,
-         }}
-        className="absolute -left-[270px] top-64 flex gap-3 items-center">
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{
+            duration: 0.8,
+          }}
+          viewport={{ once: true }}
+          className="absolute -left-[270px] top-64 flex gap-3 items-center"
+        >
           <span
-          onClick={arrowLeft}
-          className="w-10 h-10 rounded-full flex justify-center items-center  border-green-400 border-[1px] shadow-xl shadow-green-600/50 hover:bg-green-400 hover:text-darkgray transition duration-300">
+            onClick={arrowLeft}
+            className="w-10 h-10 rounded-full flex justify-center items-center  border-green-400 border-[1px] shadow-xl shadow-green-600/50 hover:bg-green-400 hover:text-darkgray transition duration-300"
+          >
             {" "}
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -124,11 +127,13 @@ function Testimonials() {
           </span>
           <span className="text-xs text-slate-500">
             {" "}
-            <span className="text-sm text-slate-300">{index+1}</span>/{data.length}{" "}
+            <span className="text-sm text-slate-300">{index + 1}</span>/
+            {data.length}{" "}
           </span>
-          <span 
-          onClick={arrowRight}
-          className="w-10 h-10 rounded-full flex justify-center items-center  border-green-400 border-[1px] shadow-xl shadow-green-600/50 hover:bg-green-400 hover:text-darkgray transition duration-300">
+          <span
+            onClick={arrowRight}
+            className="w-10 h-10 rounded-full flex justify-center items-center  border-green-400 border-[1px] shadow-xl shadow-green-600/50 hover:bg-green-400 hover:text-darkgray transition duration-300"
+          >
             {" "}
             <svg
               xmlns="http://www.w3.org/2000/svg"
