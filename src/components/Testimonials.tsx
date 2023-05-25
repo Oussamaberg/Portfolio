@@ -78,11 +78,11 @@ function Testimonials() {
         </span>
         <span className="">Testimonials</span>
       </motion.div>
-      <div className="green-grad text-5xl xl:text-6xl pb-20">
+      <div className="green-grad text-4xl md:text-6xl  pb-20">
         Trusted by Hundred Clients
       </div>
       <div className="relative flex flex-col">
-        <div className=" absolute -left-[270px] font-seri text-lg underline decoration-green-400">
+        <div className=" absolute -left-[200px] font-seri text-lg underline decoration-green-400">
           Testimonials
         </div>
 
@@ -103,7 +103,7 @@ function Testimonials() {
             duration: 0.8,
           }}
           viewport={{ once: true }}
-          className="absolute -left-[270px] top-64 flex gap-3 items-center"
+          className="absolute -left-[200px] top-72 flex gap-3 items-center"
         >
           <span
             onClick={arrowLeft}

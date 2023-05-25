@@ -3,8 +3,8 @@ import EducationCard from "./EducationCard";
 function VerticalSlide() {
   return (
     <div className="flex  justify-center">
-      <div className="   relative mt-[500px] sm:mt-[450px] md:mt-[300px]">
-        <div className="absolute w-96 xl:w-[800px] -top-20 sm:-top-32 md:-top-20 lg:-top-40  xl:-top-30  -left-40 text-3xl xl:text-6xl green-grad ">
+      <div className="  flex flex-col justify-cente items-center  mt-[380px] sm:mt-[260px]  md:mt-[150px] 2xl:mt-[40px]">
+        <div className=" w-96 xl:w-[800px]  text-3xl xl:text-6xl green-grad pb-20 text-center">
           Education and Experience
         </div>
         <motion.div
@@ -18,7 +18,7 @@ function VerticalSlide() {
             staggerChildren: 1.5,
           }}
           viewport={{ once: true }}
-          className="absolute -left-40 border-l-2 pl-5 border-slate-400 h-[500px] w-96"
+          className="  border-l-2 pl-5 border-slate-400 h-[500px] "
         >
           <motion.div
             initial={{ x: 50, opacity: 0 }}
@@ -32,9 +32,9 @@ function VerticalSlide() {
           >
             <div className="absolute  inset-0 -left-7 h-4 w-4 rounded-full bg-green-400"></div>
             <EducationCard
-              date={"01/03/2023"}
-              tittle={"Software engineer"}
-              description={"Software engineer degree from alx africa"}
+              date={"2023-Present"}
+              tittle={"Engineer's degree"}
+              description={"Computer Software Engineering from ALX Africa"}
             />
           </motion.div>
           <motion.div
@@ -49,9 +49,9 @@ function VerticalSlide() {
           >
             <div className="absolute  inset-0 -left-7 h-4 w-4 rounded-full bg-green-400"></div>
             <EducationCard
-              date={"01/03/2023"}
-              tittle={"Software engineer"}
-              description={"Software engineer degree from alx africa"}
+              date={"2012-2014"}
+              tittle={"Master's degree"}
+              description={"Air traffic safety electronics from AIMAC"}
             />
           </motion.div>
           <motion.div
@@ -66,9 +66,9 @@ function VerticalSlide() {
           >
             <div className="absolute  inset-0 -left-7 h-4 w-4 rounded-full bg-green-400"></div>
             <EducationCard
-              date={"01/03/2023"}
-              tittle={"Software engineer"}
-              description={"Software engineer degree from alx africa"}
+              date={"2008-2012"}
+              tittle={"Bachelor Degree"}
+              description={"Electrical, Electronics and Communications form FSTG"}
             />
           </motion.div>
         </motion.div>

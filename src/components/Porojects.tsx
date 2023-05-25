@@ -4,13 +4,14 @@ import ProjectCardLg from "./ProjectCardLg";
 
 function Projects() {
   return (
-    <div className="relative flex flex-col justify-center  items-center  mt-[250px]  md:mt-70 p-2 ">
+    <div className="relative flex flex-col justify-center  items-center  mt-[150px]  md:mt-70 p-2 ">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{
           duration: 0.8,
         }}
+        id="projects-section"
         className="  absolute flex -top-16 left-10 2xl:left-1/4 border-2 py-1 px-3 rounded-3xl"
       >
         <span>
@@ -31,7 +32,7 @@ function Projects() {
         </span>
         <span>Projects</span>
       </motion.div>
-      <div className="  green-grad text-5xl xl:text-6xl pb-20">Projects</div>
+      <div className="  green-grad text-4xl md:text-6xl  pb-20">Projects</div>
       <div className="gap-4 grid grid-cols-2">
         <div className="col-span-2 ">
           <ProjectCardLg

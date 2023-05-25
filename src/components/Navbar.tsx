@@ -1,7 +1,24 @@
+import { useState } from "react";
+import SideMenu from "./SideMenu";
+import { AnimatePresence } from "framer-motion";
+
 function Navbar() {
+ 
+  const [sideMenu, setSideMenu] = useState(false);
+  const toggleSideMenu = () => {
+    if (sideMenu == true){
+      setSideMenu(false);
+    }else{
+      setSideMenu(true);
+    }
+    
+  };
   return (
-    <nav className="">
-      <div className="flex justify-between items-center p-2">
+    <nav className="relative ">
+      <AnimatePresence>
+      {sideMenu && <SideMenu toggle={toggleSideMenu} />}
+      </AnimatePresence>
+      <div className="flex  justify-between items-center p-2">
         <div className="flex items-center gap-2">
           <span className=" rounded-full border-2 p-1 border-slate-400  cursor-pointer ">
             <svg
@@ -21,8 +38,23 @@ function Navbar() {
           </span>
           <span className="text-xs font-mono">Ossama.berghai@gmail.com</span>
         </div>
-
-        <div className=" flex gap-4">
+        <span onClick={toggleSideMenu} className="sm:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            className="w-8 h-8"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+            />
+          </svg>
+        </span>
+        <div className=" hidden sm:flex gap-4">
           <span className="hover:bg-blue-500 p-1 rounded-xl hover:shadow-lg hover:text-darkgray font-bold hover:shadow-blue-500/50 transition duration-700  cursor-pointer">
             Linkdin
           </span>

@@ -17,7 +17,7 @@ function TestimonialsCard({name, img, position, company, project,index, text, mo
         duration:0.8,
     }}
     viewport={{ once: true }}
-    className=" p-5 absolute -left-[270px] flex flex-col top-10 w-[500px] h-[200px] border-green-400 border-[1px] rounded-3xl">
+    className=" p-5 absolute -left-[200px] flex flex-col top-10 w-[400px] md:w-[500px] h-[230px] border-green-400 border-[1px] rounded-3xl">
       <motion.div
       animate={controlsImg}
       transition={{

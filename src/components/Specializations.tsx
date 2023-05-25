@@ -4,7 +4,7 @@ import SpecialisationCard from "./SpecialisationCard";
 
 function Specializations() {
   return (
-    <div className="relative flex flex-col justify-center items-center  mt-[650px]  md:mt-96 p-2">
+    <div className="relative flex flex-col justify-center items-center  mt-[720px]  md:mt-96 p-2">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -31,11 +31,11 @@ function Specializations() {
         </span>
         <span>Specialization</span>
       </motion.div>
-      <div className="text-6xl green-grad pb-10">My Specialization</div>
+      <div className="text-4xl md:text-6xl green-grad pb-10">My Specialization</div>
       <SpecialisationCard
         tittle={"Web-app Devlopment"}
         description={
-          "I build webApps using the cuting edge technologies like ReactJs and TailwindCSS"
+          "I specialize in crafting exceptional web applications with cutting-edge technologies."
         }
         projectNumber={3}
       >
@@ -57,9 +57,9 @@ function Specializations() {
       <SpecialisationCard
         tittle={"Mobile-app Devlopment"}
         description={
-          "I build webApps using the cuting edge technologies like ReactNative and tailwindCss"
+          "I can build creating cutting-edge mobile applications using the latest technologies."
         }
-        projectNumber={3}
+        projectNumber={1}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +78,7 @@ function Specializations() {
       <SpecialisationCard
         tittle={"Back-end devlopement"}
         description={
-          "I build automation scripts and database administration using Python and nodeJS"
+          " I possess expertise in scripting with Python and Shell"
         }
         projectNumber={3}
       >

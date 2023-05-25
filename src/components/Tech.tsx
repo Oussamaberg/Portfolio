@@ -38,7 +38,7 @@ function Tech() {
         </span>
         <span>Technologies</span>
       </motion.div>
-      <div className="  green-grad text-5xl xl:text-6xl pb-52">
+      <div className="  green-grad text-4xl md:text-6xl pb-52">
         Technology Stack
       </div>
       <div className="relative  ">
@@ -55,7 +55,7 @@ function Tech() {
             repeat: Infinity,
             delay: 0.5,
           }}
-          className="absolute -left-60 top-20"
+          className="absolute -left-52  sm:-left-60 top-20"
         >
           <PythonIcon />
         </motion.div>
@@ -105,7 +105,7 @@ function Tech() {
             repeat: Infinity,
             delay: 0.9,
           }}
-          className="absolute -right-[280px]"
+          className="absolute -right-[220px] sm:-right-[280px]"
         >
           <TailwindIcon />
         </motion.div>

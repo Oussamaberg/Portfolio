@@ -4,7 +4,7 @@ import GlowingButton from "./GlowingButton";
 function About() {
   let { scrollYProgress } = useScroll();
   let y = useTransform(scrollYProgress, [0, 1], [0, 100])
-  let opacity = useTransform(scrollYProgress, [0, 1], [-1, 10]);
+  let opacity = useTransform(scrollYProgress, [0, 1], [0, 5]);
   let scale = useTransform(scrollYProgress, [0, 1], [1, 1.4]);
   return (
     <div className="relative flex flex-col justify-center items-center">
@@ -48,7 +48,7 @@ function About() {
           delay: 0.3,
         }}
         viewport={{ once: true }}
-        className=" text-3xl px-5 pt-20 md:text-center  xl:w-2/3 font-semibold text-gray-400"
+        className=" text-3xl px-5 pt-10 md:text-center  xl:w-2/3 font-semibold text-gray-400"
       >
         
           Hello there! My name is Oussama Berghai, and I am from the beautiful

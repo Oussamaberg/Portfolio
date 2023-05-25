@@ -26,7 +26,7 @@ function Contact() {
  const disablButton =  Object.keys(formik.errors).length != 0
   return (
     <div className="flex flex-col justify-center items-center">
-      <div className="green-grad text-5xl xl:text-6xl pb-20">
+      <div className="green-grad text-4xl md:text-6xl pb-20">
         Let Me Help You
       </div>
       <form
