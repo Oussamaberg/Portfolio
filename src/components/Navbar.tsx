@@ -38,7 +38,20 @@ function Navbar() {
           </span>
           <span className="text-xs font-mono">Ossama.berghai@gmail.com</span>
         </div>
-        <span onClick={toggleSideMenu} className="sm:hidden">
+      
+        <div className="flex gap-2">
+          <div className=" hidden sm:flex gap-4">
+          <span className="hover:bg-blue-500 p-1 rounded-xl hover:shadow-lg hover:text-darkgray font-bold hover:shadow-blue-500/50 transition duration-700  cursor-pointer">
+            Linkdin
+          </span>
+          <span className="hover:bg-blue-400 p-1 rounded-xl hover:shadow-lg hover:text-darkgray font-bold hover:shadow-blue-300/50 transition duration-700  cursor-pointer">
+            Twitter
+          </span>
+          <span className="hover:bg-slate-300 p-1 rounded-xl hover:shadow-lg hover:text-darkgray font-bold hover:shadow-slate-300/50 transition duration-700  cursor-pointer">
+            Github
+          </span>
+          </div>
+          <span onClick={toggleSideMenu} className="">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -54,16 +67,6 @@ function Navbar() {
             />
           </svg>
         </span>
-        <div className=" hidden sm:flex gap-4">
-          <span className="hover:bg-blue-500 p-1 rounded-xl hover:shadow-lg hover:text-darkgray font-bold hover:shadow-blue-500/50 transition duration-700  cursor-pointer">
-            Linkdin
-          </span>
-          <span className="hover:bg-blue-400 p-1 rounded-xl hover:shadow-lg hover:text-darkgray font-bold hover:shadow-blue-300/50 transition duration-700  cursor-pointer">
-            Twitter
-          </span>
-          <span className="hover:bg-slate-300 p-1 rounded-xl hover:shadow-lg hover:text-darkgray font-bold hover:shadow-slate-300/50 transition duration-700  cursor-pointer">
-            Github
-          </span>
         </div>
       </div>
     </nav>

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import cv from "../assets/doc/Resume.pdf"
 function GlowingButton() {
   return (
     <div className="relative group">
@@ -10,6 +11,7 @@ function GlowingButton() {
         }}
         className="absolute mt-20 inset-0 bg-gradient-to-r from-emerald-500 to-indigo-500 rounded-lg blur-md group-hover:blur-lg transotion duration-700"
       ></motion.div>
+      <a href={cv} download="Resume.pdf">
       <button className="relative mt-20 bg-black px-7 py-4 rounded-lg flex items-center divide-x divide-gray-600 ">
         <span className="pr-6 flex">
           <span className=" pr-5">
@@ -48,6 +50,7 @@ function GlowingButton() {
           </svg>
         </span>
       </button>
+      </a>
     </div>
   );
 }

@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
-function SideMenu({ toggle }:{toggle:any}) {
+function SideMenu({ toggle }: { toggle: any }) {
   document.body.style.overflow = "hidden";
-  
 
-  const enableScroll = (anchor:string) => {
+  const enableScroll = (anchor: string) => {
     document.body.style.overflow = "visible";
     toggle();
     const id = `${anchor}-section`;
@@ -12,11 +11,9 @@ function SideMenu({ toggle }:{toggle:any}) {
       element.scrollIntoView({
         behavior: "smooth",
         block: "start",
-    
       });
     }
-
-  }
+  };
 
   return (
     <motion.div
@@ -29,12 +26,15 @@ function SideMenu({ toggle }:{toggle:any}) {
         delayChildren: 0.3,
       }}
       exit={{
-        x: 600, 
-        opacity:0
+        x: 600,
+        opacity: 0,
       }}
-      className=" absolute  z-50 w-screen h-screen backdrop-blur-md bg-green-800/50 flex flex-col justify-center items-center"
+      className=" absolute  z-50 w-screen h-screen md:w-[500px] right-0 backdrop-blur-md bg-green-800/50 flex flex-col justify-center items-center"
     >
-      <div onClick={() => enableScroll("")} className="absolute top-0 right-0 p-4">
+      <div
+        onClick={() => enableScroll("")}
+        className="absolute top-0 right-0 p-4"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -58,7 +58,7 @@ function SideMenu({ toggle }:{toggle:any}) {
           type: "tween",
           ease: "easeIn",
         }}
-        className="flex gap-4"
+        className="flex gap-4 sm:hidden"
       >
         <motion.span
           initial={{ y: 20 }}
@@ -159,7 +159,9 @@ function SideMenu({ toggle }:{toggle:any}) {
           }}
           className="hover:text-darkgray hover:scale-90 transition duration-500"
         >
-          <a onClick={() => enableScroll("projects")} href="#projects">Projects</a>
+          <a onClick={() => enableScroll("projects")} href="#projects">
+            Projects
+          </a>
         </motion.li>
         <motion.li
           initial={{ y: 20 }}
