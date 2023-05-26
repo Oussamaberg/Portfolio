@@ -11,6 +11,7 @@ function Specializations() {
         transition={{
           duration: 0.8,
         }}
+        id="specialization-section"
         className="  absolute flex -top-16 left-10 2xl:left-1/4 border-2 py-1 px-3 rounded-3xl"
       >
         <span>

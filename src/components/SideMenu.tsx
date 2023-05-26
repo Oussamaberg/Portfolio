@@ -2,9 +2,7 @@ import { motion } from "framer-motion";
 function SideMenu({ toggle }: { toggle: any }) {
   document.body.style.overflow = "hidden";
 
-  const enableScroll = (anchor: string) => {
-    document.body.style.overflow = "visible";
-    toggle();
+  const scrollToSection = (anchor:string) => {
     const id = `${anchor}-section`;
     const element = document.getElementById(id);
     if (element) {
@@ -13,6 +11,12 @@ function SideMenu({ toggle }: { toggle: any }) {
         block: "start",
       });
     }
+  };
+
+  const enableScroll = (anchor: string) => {
+    document.body.style.overflow = "visible";
+    toggle();
+    setTimeout(() => scrollToSection(anchor), 500)
   };
 
   return (
@@ -33,7 +37,7 @@ function SideMenu({ toggle }: { toggle: any }) {
     >
       <div
         onClick={() => enableScroll("")}
-        className="absolute top-0 right-0 p-4"
+        className="absolute top-0 right-0 p-2"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -108,7 +112,7 @@ function SideMenu({ toggle }: { toggle: any }) {
           type: "tween",
           ease: "easeIn",
         }}
-        className=" flex flex-col items-center gap-2 pt-20 text-xl"
+        className=" flex flex-col items-center gap-2 pt-20 text-4xl text-slate-300"
       >
         <motion.li
           initial={{ y: 20 }}
@@ -120,7 +124,20 @@ function SideMenu({ toggle }: { toggle: any }) {
           }}
           className="hover:text-darkgray hover:scale-90   transition duration-500"
         >
-          <a href="">About</a>
+          <a onClick={() => enableScroll("about")} href="#about">About</a>
+        </motion.li>
+        <motion.li
+          initial={{ y: 20 }}
+          animate={{ y: 0 }}
+          transition={{
+            duration: 0.3,
+            type: "tween",
+            ease: "easeIn",
+            delay: 0.4,
+          }}
+          className="hover:text-darkgray hover:scale-90 transition duration-500"
+        >
+          <a onClick={() => enableScroll("education")} href="#education" >Education</a>
         </motion.li>
         <motion.li
           initial={{ y: 20 }}
@@ -133,7 +150,7 @@ function SideMenu({ toggle }: { toggle: any }) {
           }}
           className="hover:text-darkgray hover:scale-90 transition duration-500"
         >
-          <a href="">Specialization</a>
+          <a onClick={() => enableScroll("specialization")} href="#specialization">Specialization</a>
         </motion.li>
         <motion.li
           initial={{ y: 20 }}
@@ -146,7 +163,7 @@ function SideMenu({ toggle }: { toggle: any }) {
           }}
           className="hover:text-darkgray hover:scale-90 transition duration-500"
         >
-          <a href="">Tech Stack</a>
+          <a onClick={() => enableScroll("tech")} href="#tech">Tech Stack</a>
         </motion.li>
         <motion.li
           initial={{ y: 20 }}
@@ -174,7 +191,20 @@ function SideMenu({ toggle }: { toggle: any }) {
           }}
           className="hover:text-darkgray hover:scale-90 transition duration-500"
         >
-          <a href="">Contact</a>
+          <a onClick={() => enableScroll("testimonials")} href="#testimonials" >Testimonials</a>
+        </motion.li>
+        <motion.li
+          initial={{ y: 20 }}
+          animate={{ y: 0 }}
+          transition={{
+            duration: 0.3,
+            type: "tween",
+            ease: "easeIn",
+            delay: 0.4,
+          }}
+          className="hover:text-darkgray hover:scale-90 transition duration-500"
+        >
+          <a onClick={() => enableScroll("contact")} href="#contact" >Contact</a>
         </motion.li>
       </motion.ul>
     </motion.div>

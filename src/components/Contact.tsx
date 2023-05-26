@@ -1,19 +1,32 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import useSubmit from "./hooks/useSubmit";
+import ReCAPTCHA from "react-google-recaptcha";
+import Alert from "./Alert";
+import { useState, useEffect } from "react";
+
+import { useRef } from "react";
 function Contact() {
+  const [showAlert, setShowAlert] = useState(false);
+  const REACT_APP_SITE_KEY = "6Ldjvj8mAAAAAGZN1giIu1Z-CJ1pYAzD5bfXXoVl";
+  const captchaRef: any = useRef(null);
   const { isLoading, response, submit } = useSubmit();
   const formik = useFormik({
     initialValues: {
       fullname: "",
       email: "",
       message: "",
+      "g-recaptcha-response": "",
     },
     onSubmit: (values) => {
+      let token: string = captchaRef.current.getValue();
+      captchaRef.current.reset();
+      values = {
+        ...values,
+        "g-recaptcha-response": token,
+      };
       submit(values);
-      console.log(response);
-      console.log(isLoading);
     },
     validationSchema: Yup.object({
       fullname: Yup.string().required("this field is Required"),
@@ -26,9 +39,47 @@ function Contact() {
     }),
   });
 
+  useEffect(() => {
+    if (response) {
+      setShowAlert(true);
+    }
+    setTimeout(() => setShowAlert(false), 5000);
+  }, [response]);
+
   const disablButton = Object.keys(formik.errors).length != 0 || isLoading;
   return (
-    <div className="flex flex-col justify-center items-center mt-10">
+    <div className="relative flex flex-col justify-center items-center mt-[140px] h-full">
+      <AnimatePresence>
+        {showAlert && <Alert response={response} />}
+      </AnimatePresence>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{
+          duration: 0.8,
+        }}
+        id="contact-section"
+        className="  absolute flex -top-16 left-10 2xl:left-1/4 border-2 py-1 px-3 rounded-3xl"
+      >
+        <span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+            />
+          </svg>
+        </span>
+        <span className="">Contact me</span>
+      </motion.div>
       <div className="green-grad text-4xl md:text-6xl pb-20">
         Let Me Help You
       </div>
@@ -125,6 +176,14 @@ function Contact() {
             </div>
           ) : null}
         </motion.div>
+        <div className="">
+          <ReCAPTCHA
+            sitekey={REACT_APP_SITE_KEY}
+            ref={captchaRef}
+            theme="dark"
+          />
+        </div>
+
         <button
           disabled={disablButton}
           className={

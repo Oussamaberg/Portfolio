@@ -1,15 +1,16 @@
-import { easeInOut, easeOut, useScroll, useTransform } from "framer-motion";
+import { useScroll, useTransform } from "framer-motion";
 import { motion } from "framer-motion";
 import GlowingButton from "./GlowingButton";
+
 function About() {
   let { scrollYProgress } = useScroll();
-  let y = useTransform(scrollYProgress, [0, 1], [0, 100])
   let opacity = useTransform(scrollYProgress, [0, 1], [0, 5]);
   let scale = useTransform(scrollYProgress, [0, 1], [1, 1.4]);
   return (
     <div className="relative flex flex-col justify-center items-center">
       <motion.div 
       style={{ opacity: opacity}}
+      id="about-section"
       className="  absolute flex -top-16 left-10 2xl:left-1/4 border-2 py-1 px-3 rounded-3xl">
         <span>
           <svg
