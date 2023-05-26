@@ -40,25 +40,25 @@ function Projects() {
             bg={"bg-project-2"}
             url={"https://enigm-puzzle.netlify.app"}
             github={"https://github.com/Oussamaberg/Enigma"}
-            text={"Game developpement - Enigma Math puzzle Game"}
+            text={"Enigma: Math puzzle Game"}
           />
         </div>
 
         <ProjectCard
-          techArray={["reactJS", "TailwindCss"]}
+          techArray={["reactJS", "Formik"]}
           bg={"bg-project-1"}
           url={"https://enigm-puzzle.netlify.app"}
-          github={"https://github.com/Oussamaberg/Enigma"}
+          github={"https://github.com/Oussamaberg/Portfolio"}
           position="left"
           text={"This Portfolio Web-site"}
         />
         <ProjectCard
-          techArray={["reactJS", "TailwindCss"]}
+          techArray={["reactJS", "ShakraUI"]}
           bg={"bg-project-3"}
           url={"https://enigm-puzzle.netlify.app"}
-          github={"https://github.com/Oussamaberg/Enigma"}
+          github={"https://github.com/Oussamaberg/StarterPortfolio"}
           position="right"
-          text={"Portfolio Web-Site Coursera"}
+          text={"Portfolio Web-Site project"}
         />
       </div>
     </div>

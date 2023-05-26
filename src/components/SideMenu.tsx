@@ -133,7 +133,7 @@ function SideMenu({ toggle }: { toggle: any }) {
             duration: 0.3,
             type: "tween",
             ease: "easeIn",
-            delay: 0.4,
+            delay: 0.1,
           }}
           className="hover:text-darkgray hover:scale-90 transition duration-500"
         >
@@ -146,7 +146,7 @@ function SideMenu({ toggle }: { toggle: any }) {
             duration: 0.3,
             type: "tween",
             ease: "easeIn",
-            delay: 0.1,
+            delay: 0.2,
           }}
           className="hover:text-darkgray hover:scale-90 transition duration-500"
         >
@@ -159,7 +159,7 @@ function SideMenu({ toggle }: { toggle: any }) {
             duration: 0.3,
             type: "tween",
             ease: "easeIn",
-            delay: 0.2,
+            delay: 0.3,
           }}
           className="hover:text-darkgray hover:scale-90 transition duration-500"
         >
@@ -172,7 +172,7 @@ function SideMenu({ toggle }: { toggle: any }) {
             duration: 0.3,
             type: "tween",
             ease: "easeIn",
-            delay: 0.3,
+            delay: 0.4,
           }}
           className="hover:text-darkgray hover:scale-90 transition duration-500"
         >
@@ -187,7 +187,7 @@ function SideMenu({ toggle }: { toggle: any }) {
             duration: 0.3,
             type: "tween",
             ease: "easeIn",
-            delay: 0.4,
+            delay: 0.5,
           }}
           className="hover:text-darkgray hover:scale-90 transition duration-500"
         >
@@ -200,7 +200,7 @@ function SideMenu({ toggle }: { toggle: any }) {
             duration: 0.3,
             type: "tween",
             ease: "easeIn",
-            delay: 0.4,
+            delay: 0.6,
           }}
           className="hover:text-darkgray hover:scale-90 transition duration-500"
         >

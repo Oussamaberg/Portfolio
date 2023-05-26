@@ -14,7 +14,7 @@ function ProjectCard({
   position:string;
   text:string
 }) {
-  const Class = `relative h-[200px] w-[200]  md:w-[350px] md:h-[350px] ${bg} bg-cover bg-center rounded-3xl p-5`;
+  const Class = `relative h-[200px] w-[200]  md:w-[350px] md:h-[350px] ${bg} bg-cover bg-top rounded-3xl p-5`;
   return (
     <div>
     <motion.div 
@@ -65,7 +65,7 @@ function ProjectCard({
         </a>
         
       </div>
-      <div className="flex gap-1">
+      <div className=" absolute flex bottom-2   gap-1">
         {techArray.map((item, index) => (
           <span
             key={index}

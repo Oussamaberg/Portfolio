@@ -12,7 +12,7 @@ function ProjectCardLg({
   github: string;
   text:string
 }) {
-  const Class = `relative h-[200px]   md:h-[350px] ${bg} bg-cover bg-center rounded-3xl p-5`;
+  const Class = `relative h-[200px]   md:h-[350px] ${bg} bg-cover bg-top rounded-3xl p-5`;
   return (
     <div>
     <motion.div 
@@ -22,6 +22,7 @@ function ProjectCardLg({
     viewport={{ once: true }}
     className={Class}>
       <div className="absolute inset-0 opacity-0 hover:opacity-100 bg-green-400/50 rounded-3xl    backdrop-blur-md flex items-center justify-center gap-4 transition duration-700">
+     
         <a href={url}>
         <div className="w-8 h-8 rounded-full  bg-darkgray flex justify-center items-center">
           <svg
@@ -41,7 +42,8 @@ function ProjectCardLg({
         </div>
         </a>
         <a href={github}>
-        <div className="w-8 h-8 rounded-full bg-darkgray flex justify-center items-center">
+        <div className="w-8 h-8 rounded-full bg-darkgray flex justify-center items-center relative">
+          
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -60,7 +62,7 @@ function ProjectCardLg({
         </a>
         
       </div>
-      <div className="flex gap-1">
+      <div className="flex gap-1 absolute  bottom-2 ">
         {techArray.map((item, index) => (
           <span
             key={index}

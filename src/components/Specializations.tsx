@@ -4,7 +4,7 @@ import SpecialisationCard from "./SpecialisationCard";
 
 function Specializations() {
   return (
-    <div className="relative flex flex-col justify-center items-center  mt-[720px]  md:mt-96 p-2">
+    <div className="relative flex flex-col justify-center items-center mt-[250px]   md:mt-[280px] p-2">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -79,7 +79,7 @@ function Specializations() {
       <SpecialisationCard
         tittle={"Back-end devlopement"}
         description={
-          " I possess expertise in scripting with Python and Shell"
+          " I possess expertise in scripting with Python, NodeJS and Shell"
         }
         projectNumber={3}
       >
