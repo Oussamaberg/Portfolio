@@ -1,7 +1,7 @@
-function PythonIcon(){
+function PythonIcon({size}:{size:number}){
 return <svg
-width="100"
-height="100"
+width={size}
+height={size}
 viewBox="0 0 256 255"
 xmlns="http://www.w3.org/2000/svg"
 preserveAspectRatio="xMinYMin meet"

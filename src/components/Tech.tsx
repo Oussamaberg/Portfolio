@@ -11,7 +11,7 @@ function Tech() {
   let { scrollYProgress } = useScroll();
   let y = useTransform(scrollYProgress, [0, 1], [0, 700]);
   return (
-    <div className="relative flex flex-col justify-center items-center  mt-[250px]  md:mt-70 p-2">
+    <div className="relative flex flex-col justify-center items-center  mt-[360px]  md:mt-70 p-2">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -58,7 +58,7 @@ function Tech() {
           }}
           className="absolute -left-52  sm:-left-60 top-20"
         >
-          <PythonIcon />
+          <PythonIcon size={100} />
         </motion.div>
         <motion.div
           whileInView={{
@@ -91,7 +91,7 @@ function Tech() {
           }}
           className="absolute -left-16 -top-40"
         >
-          <ReactIcon />
+          <ReactIcon size={100} />
         </motion.div>
         <motion.div
           whileInView={{
@@ -108,7 +108,7 @@ function Tech() {
           }}
           className="absolute -right-[220px] sm:-right-[280px]"
         >
-          <TailwindIcon />
+          <TailwindIcon size={100} />
         </motion.div>
 
         <motion.div
@@ -126,7 +126,7 @@ function Tech() {
           }}
           className="absolute -top-20 -right-[220px]"
         >
-          <MongoIcon />
+          <MongoIcon size={64}/>
         </motion.div>
 
         <motion.div

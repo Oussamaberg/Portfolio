@@ -48,7 +48,7 @@ function Contact() {
 
   const disablButton = Object.keys(formik.errors).length != 0 || isLoading;
   return (
-    <div className="relative flex flex-col justify-center items-center mt-[140px] h-full">
+    <div className="relative flex flex-col justify-center items-center mt-[140px]">
       <AnimatePresence>
         {showAlert && <Alert response={response} />}
       </AnimatePresence>

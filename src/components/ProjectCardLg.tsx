@@ -62,18 +62,19 @@ function ProjectCardLg({
         </a>
         
       </div>
-      <div className="flex gap-1 absolute  bottom-2 ">
+    </motion.div>
+    <div className="text-xs md:text-lg font-serif p-1">{text}</div>
+    <div className="p-1 text-xs text-slate-400">Tech Used:</div>
+    <div className="  flex  gap-1">
         {techArray.map((item, index) => (
           <span
             key={index}
-            className="   bg-slate-300 text-slate-800 text-xs rounded-full px-2 py-1"
+            className="  border-[1px] border-green-400 text-green-400 text-xs rounded-full px-2 py-1"
           >
             {item}
           </span>
         ))}
       </div>
-    </motion.div>
-    <div className="text-xs md:text-lg font-serif p-2">{text}</div>
     </div>
   );
 }

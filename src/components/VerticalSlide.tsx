@@ -2,7 +2,7 @@ import { easeOut, motion } from "framer-motion";
 import EducationCard from "./EducationCard";
 function VerticalSlide() {
   return (
-    <div className="relative flex  justify-center mt-[480px] sm:mt-[340px]  md:mt-[250px] 2xl:mt-[140px]">
+    <div className="relative flex  justify-center mt-[240px] sm:mt-[340px]  md:mt-[250px] 2xl:mt-[140px]">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -57,7 +57,9 @@ function VerticalSlide() {
             viewport={{ once: true }}
             className=" relative px-4 py-2 h-32 w-60  bg-black mt-0 p-10 rounded-xl"
           >
-            <div className="absolute  inset-0 -left-7 h-4 w-4 rounded-full bg-green-400"></div>
+            <div className="absolute  inset-0 -left-[29px] h-4 w-4 rounded-full bg-darkgray flex justify-center items-center">
+            <div className=" h-2 w-2 rounded-full bg-green-400"></div>
+            </div>
             <EducationCard
               date={"2023-Present"}
               tittle={"Engineer's degree"}
@@ -74,7 +76,9 @@ function VerticalSlide() {
             viewport={{ once: true }}
             className=" relative px-4 py-2  h-32 w-60  bg-black mt-10 p-10 rounded-xl"
           >
-            <div className="absolute  inset-0 -left-7 h-4 w-4 rounded-full bg-green-400"></div>
+            <div className="absolute  inset-0 -left-[29px] h-4 w-4 rounded-full bg-darkgray flex justify-center items-center">
+            <div className=" h-2 w-2 rounded-full bg-green-400"></div>
+            </div>
             <EducationCard
               date={"2012-2014"}
               tittle={"Master's degree"}
@@ -91,7 +95,9 @@ function VerticalSlide() {
             viewport={{ once: true }}
             className=" relative  px-4 py-2 h-32 w-60  bg-black mt-10 p-10 rounded-xl"
           >
-            <div className="absolute  inset-0 -left-7 h-4 w-4 rounded-full bg-green-400"></div>
+            <div className="absolute  inset-0 -left-[29px] h-4 w-4 rounded-full bg-darkgray flex justify-center items-center">
+            <div className=" h-2 w-2 rounded-full bg-green-400"></div>
+            </div>
             <EducationCard
               date={"2008-2012"}
               tittle={"Bachelor Degree"}

@@ -8,6 +8,7 @@ import Tech from "./components/Tech";
 import Projects from "./components/Porojects";
 import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -41,9 +42,9 @@ function App() {
         <Section>
           <Contact />
         </Section>
-        <Section>
-          
-        </Section>
+        
+          <Footer/>
+        
       </div>
     </>
   );

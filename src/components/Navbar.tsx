@@ -14,7 +14,7 @@ function Navbar() {
     
   };
   return (
-    <nav className="relative ">
+    <nav className="relative " id="nav-section">
       <AnimatePresence>
       {sideMenu && <SideMenu toggle={toggleSideMenu} />}
       </AnimatePresence>

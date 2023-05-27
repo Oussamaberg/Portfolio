@@ -51,7 +51,7 @@ function Testimonials() {
   ];
 
   return (
-    <div className="relative flex flex-col justify-center  items-center  mt-[250px]  md:mt-[600px] p-2 ">
+    <div className="relative flex flex-col justify-center  items-center  mt-[340px]  md:mt-[650px] p-2 ">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -79,7 +79,7 @@ function Testimonials() {
         </span>
         <span className="">Testimonials</span>
       </motion.div>
-      <div className="green-grad text-4xl md:text-6xl  pb-20">
+      <div className="green-grad text-4xl md:text-6xl  pb-20   text-center">
         Trusted by Hundred Clients
       </div>
       <div className="relative flex flex-col justify-center   items-start gap-4">

@@ -35,7 +35,7 @@ function About() {
         className=" flex flex-col items-center"
       >
         <h2 className="text-3xl px-16  lg:text-4xl xl:text-5xl">
-          Every great design begin with an even{" "}
+          Every great UI begin with an even{" "}
           <span className="green-grad">better story:</span>
         </h2>
       </motion.div>
@@ -49,7 +49,7 @@ function About() {
           delay: 0.3,
         }}
         viewport={{ once: true }}
-        className=" text-3xl px-5 pt-10 md:text-center  xl:w-2/3 font-semibold text-gray-400"
+        className=" sm:text-3xl px-5 pt-10 md:text-center  xl:w-2/3 font-semibold text-gray-400"
       >
         
           Hello there! My name is Oussama Berghai, and I am from the beautiful

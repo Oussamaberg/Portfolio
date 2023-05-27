@@ -1,11 +1,11 @@
-function ReactIcon(){
+function ReactIcon({size}:{size:number}){
     return <svg
     xmlns="http://www.w3.org/2000/svg"
     aria-hidden="true"
     role="img"
     className="iconify iconify--logos"
-    width="100"
-    height="100"
+    width={size}
+    height={size}
     preserveAspectRatio="xMidYMid meet"
     viewBox="0 0 256 228"
   >

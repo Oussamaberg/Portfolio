@@ -4,7 +4,7 @@ import ProjectCardLg from "./ProjectCardLg";
 
 function Projects() {
   return (
-    <div className="relative flex flex-col justify-center  items-center  mt-[150px]  md:mt-70 p-2 ">
+    <div className="relative flex flex-col justify-center  items-center  mt-[100px]  md:mt-70 p-2 ">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -36,7 +36,7 @@ function Projects() {
       <div className="gap-4 grid grid-cols-2">
         <div className="col-span-2 ">
           <ProjectCardLg
-            techArray={["reactJS", "TailwindCss"]}
+            techArray={["ReactJS", "TailwindCss","Typescript", "React Router"]}
             bg={"bg-project-2"}
             url={"https://enigm-puzzle.netlify.app"}
             github={"https://github.com/Oussamaberg/Enigma"}
@@ -45,7 +45,7 @@ function Projects() {
         </div>
 
         <ProjectCard
-          techArray={["reactJS", "Formik"]}
+          techArray={["ReactJS", "TailwindCss","Typescript", "Formik", "Yup"]}
           bg={"bg-project-1"}
           url={"https://enigm-puzzle.netlify.app"}
           github={"https://github.com/Oussamaberg/Portfolio"}
@@ -53,7 +53,7 @@ function Projects() {
           text={"This Portfolio Web-site"}
         />
         <ProjectCard
-          techArray={["reactJS", "ShakraUI"]}
+          techArray={["ReactJS", "ShakraUI", "Formik", "Yup"]}
           bg={"bg-project-3"}
           url={"https://enigm-puzzle.netlify.app"}
           github={"https://github.com/Oussamaberg/StarterPortfolio"}
