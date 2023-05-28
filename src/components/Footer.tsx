@@ -11,7 +11,7 @@ function Footer() {
   };
   const date = new Date();
   return (
-    <div className=" relative flex flex-col h-40  w-full  justify-center  items-center border-t-2 gap-2  p-10 text-xs mb-2 mt-20 text-darkgray">
+    <div className=" relative flex flex-col h-40  w-full  justify-center  items-center border-t-2 gap-2  p-10 text-xs mb-2 mt-60 text-darkgray">
       <a onClick={() => scrollToSection("nav")} href="#about"><div  className=" absolute   animate-bounce right-0 top-0 mt-5 mr-1 opacity-75 bg-green-400 w-16 h-16  rounded-full flex justify-center items-center ">
         <svg
           xmlns="http://www.w3.org/2000/svg"

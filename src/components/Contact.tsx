@@ -43,16 +43,17 @@ function Contact() {
     if (response) {
       setShowAlert(true);
     }
-    setTimeout(() => setShowAlert(false), 5000);
+    setTimeout(() => setShowAlert(false), 3000);
   }, [response]);
 
   const disablButton = Object.keys(formik.errors).length != 0 || isLoading;
   return (
     <div className="relative flex flex-col justify-center items-center mt-[140px]">
+      <div className="h-20">
       <AnimatePresence>
         {showAlert && <Alert response={response} />}
       </AnimatePresence>
-
+</div>
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

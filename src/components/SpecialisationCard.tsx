@@ -22,7 +22,7 @@ function SpecialisationCard({
       viewport={{ once: true }}
       className="p-3"
     >
-      <div className=" relative   w-[340px] sm:w-[500px] md:w-[700px]group m-1">
+      <div className=" relative   w-[340px] sm:w-[500px] md:w-[700px] group m-1">
         
         <div className="relative flex flex-col py-10 px-5 gap-1  bg-darkgray   group-hover:rotate-1 rotat border-2 rounded-xl border-green-400 ransition   duration-700 h-[200px] ">
           <span className="absolute top-3  right-3  text-green-400 group-hover:scale-75 group-hover:text-green-800 ransition   duration-700 ">
