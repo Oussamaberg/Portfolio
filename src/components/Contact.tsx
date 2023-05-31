@@ -6,10 +6,11 @@ import ReCAPTCHA from "react-google-recaptcha";
 import Alert from "./Alert";
 import { useState, useEffect } from "react";
 
+
 import { useRef } from "react";
 function Contact() {
+  const env = import.meta.env
   const [showAlert, setShowAlert] = useState(false);
-  const REACT_APP_SITE_KEY = "6Ldjvj8mAAAAAGZN1giIu1Z-CJ1pYAzD5bfXXoVl";
   const captchaRef: any = useRef(null);
   const { isLoading, response, submit } = useSubmit();
   const formik = useFormik({
@@ -45,7 +46,7 @@ function Contact() {
     }
     setTimeout(() => setShowAlert(false), 3000);
   }, [response]);
-
+  
   const disablButton = Object.keys(formik.errors).length != 0 || isLoading;
   return (
     <div className="relative flex flex-col justify-center items-center mt-[140px]">
@@ -179,7 +180,7 @@ function Contact() {
         </motion.div>
         <div className="">
           <ReCAPTCHA
-            sitekey={REACT_APP_SITE_KEY}
+            sitekey={env.VITE_REACT_APP_SITE_KEY}
             ref={captchaRef}
             theme="dark"
           />
