@@ -1,5 +1,3 @@
-Sure! Here's an example of a README.md file for your personal portfolio project:
-
 # Personal Portfolio Project
 
 This is a personal portfolio project built using TypeScript, Vite, React, Tailwind CSS, Formik, Yup, and Framer Motion.
