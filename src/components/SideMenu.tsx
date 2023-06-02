@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 function SideMenu({ toggle }: { toggle: any }) {
   document.body.style.overflow = "hidden";
-
-  const scrollToSection = (anchor:string) => {
+  const env = import.meta.env;
+  const scrollToSection = (anchor: string) => {
     const id = `${anchor}-section`;
     const element = document.getElementById(id);
     if (element) {
@@ -16,7 +16,7 @@ function SideMenu({ toggle }: { toggle: any }) {
   const enableScroll = (anchor: string) => {
     document.body.style.overflow = "visible";
     toggle();
-    setTimeout(() => scrollToSection(anchor), 500)
+    setTimeout(() => scrollToSection(anchor), 500);
   };
 
   return (
@@ -75,7 +75,7 @@ function SideMenu({ toggle }: { toggle: any }) {
           }}
           className="hover:bg-blue-500 p-1 rounded-xl hover:shadow-lg hover:text-darkgray font-bold hover:shadow-blue-500/50 transition duration-700  cursor-pointer"
         >
-          Linkdin
+          <a href={env.VITE_LINKEDIN}>Linkdin</a>
         </motion.span>
         <motion.span
           initial={{ y: 20 }}
@@ -88,7 +88,7 @@ function SideMenu({ toggle }: { toggle: any }) {
           }}
           className="hover:bg-blue-400 p-1 rounded-xl hover:shadow-lg hover:text-darkgray font-bold hover:shadow-blue-300/50 transition duration-700  cursor-pointer"
         >
-          Twitter
+          <a href={env.VITE_TWITTER}>Twitter</a>
         </motion.span>
         <motion.span
           initial={{ y: 20 }}
@@ -101,7 +101,7 @@ function SideMenu({ toggle }: { toggle: any }) {
           }}
           className="hover:bg-slate-300 p-1 rounded-xl hover:shadow-lg hover:text-darkgray font-bold hover:shadow-slate-300/50 transition duration-700  cursor-pointer"
         >
-          Github
+          <a href={env.VITE_GITHUB}>Github</a>
         </motion.span>
       </motion.div>
       <motion.ul
@@ -124,7 +124,9 @@ function SideMenu({ toggle }: { toggle: any }) {
           }}
           className="hover:text-darkgray hover:scale-90   transition duration-500"
         >
-          <a onClick={() => enableScroll("about")} href="#about">About</a>
+          <a onClick={() => enableScroll("about")} href="#about">
+            About
+          </a>
         </motion.li>
         <motion.li
           initial={{ y: 20 }}
@@ -137,7 +139,9 @@ function SideMenu({ toggle }: { toggle: any }) {
           }}
           className="hover:text-darkgray hover:scale-90 transition duration-500"
         >
-          <a onClick={() => enableScroll("education")} href="#education" >Education</a>
+          <a onClick={() => enableScroll("education")} href="#education">
+            Education
+          </a>
         </motion.li>
         <motion.li
           initial={{ y: 20 }}
@@ -150,7 +154,12 @@ function SideMenu({ toggle }: { toggle: any }) {
           }}
           className="hover:text-darkgray hover:scale-90 transition duration-500"
         >
-          <a onClick={() => enableScroll("specialization")} href="#specialization">Specialization</a>
+          <a
+            onClick={() => enableScroll("specialization")}
+            href="#specialization"
+          >
+            Specialization
+          </a>
         </motion.li>
         <motion.li
           initial={{ y: 20 }}
@@ -163,7 +172,9 @@ function SideMenu({ toggle }: { toggle: any }) {
           }}
           className="hover:text-darkgray hover:scale-90 transition duration-500"
         >
-          <a onClick={() => enableScroll("tech")} href="#tech">Tech Stack</a>
+          <a onClick={() => enableScroll("tech")} href="#tech">
+            Tech Stack
+          </a>
         </motion.li>
         <motion.li
           initial={{ y: 20 }}
@@ -191,7 +202,9 @@ function SideMenu({ toggle }: { toggle: any }) {
           }}
           className="hover:text-darkgray hover:scale-90 transition duration-500"
         >
-          <a onClick={() => enableScroll("testimonials")} href="#testimonials" >Testimonials</a>
+          <a onClick={() => enableScroll("testimonials")} href="#testimonials">
+            Testimonials
+          </a>
         </motion.li>
         <motion.li
           initial={{ y: 20 }}
@@ -204,7 +217,9 @@ function SideMenu({ toggle }: { toggle: any }) {
           }}
           className="hover:text-darkgray hover:scale-90 transition duration-500"
         >
-          <a onClick={() => enableScroll("contact")} href="#contact" >Contact</a>
+          <a onClick={() => enableScroll("contact")} href="#contact">
+            Contact
+          </a>
         </motion.li>
       </motion.ul>
     </motion.div>

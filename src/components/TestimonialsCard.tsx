@@ -24,7 +24,6 @@ function TestimonialsCard({
 }: TestimonialsCardType) {
   const controlsText = useAnimationControls();
   const controlsImg = useAnimationControls();
-  console.log(move);
   useEffect(() => {
     controlsText.start({
       x: move == "right" ? [-20, 0] : [20, 0],
@@ -44,7 +43,7 @@ function TestimonialsCard({
         duration: 0.8,
       }}
       viewport={{ once: true }}
-      className=" p-5  -left-[200px] flex flex-col top-10 w-[400px] md:w-[500px] h-[230px] border-green-400 border-[1px] rounded-3xl"
+      className=" p-5  -left-[200px] flex flex-col top-10 w-[350px] md:w-[500px] h-[250px] border-green-400 border-[1px] rounded-3xl"
     >
       <motion.div
         animate={controlsImg}

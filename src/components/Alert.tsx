@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 
-function Alert({ response }: { response: string }) {
+function Alert({ response }: { response: any }) {
   var alertStyle = "";
   var message = "";
-  if (response == "error") {
+  if (response.status == 400) {
     alertStyle =
       "h-20  bg-red-700 rounded-full p-4 flex justify-center items-center";
     message = "Something whent wrong please try again!";

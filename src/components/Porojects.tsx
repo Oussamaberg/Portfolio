@@ -47,7 +47,7 @@ function Projects() {
         <ProjectCard
           techArray={["ReactJS", "TailwindCss","Typescript", "Formik", "Yup"]}
           bg={"bg-project-1"}
-          url={"https://enigm-puzzle.netlify.app"}
+          url={"https://oussamaberg.com"}
           github={"https://github.com/Oussamaberg/Portfolio"}
           position="left"
           text={"This Portfolio Web-site"}
@@ -55,7 +55,7 @@ function Projects() {
         <ProjectCard
           techArray={["ReactJS", "ShakraUI", "Formik", "Yup"]}
           bg={"bg-project-3"}
-          url={"https://enigm-puzzle.netlify.app"}
+          url={""}
           github={"https://github.com/Oussamaberg/StarterPortfolio"}
           position="right"
           text={"Portfolio Web-Site project"}

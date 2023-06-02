@@ -66,7 +66,7 @@ function Testimonials() {
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            stroke-width="1.5"
+            strokeWidth="1.5"
             stroke="currentColor"
             className="w-6 h-6"
           >
@@ -83,7 +83,7 @@ function Testimonials() {
         Trusted by Hundred Clients
       </div>
       <div className="relative flex flex-col justify-center   items-start gap-4">
-        <div className="    font-seri text-lg underline decoration-green-400">
+        <div className="    font-seri text-lg underline decoration-green-400 px-5">
           Testimonials
         </div>
 

@@ -6,10 +6,9 @@ import ReCAPTCHA from "react-google-recaptcha";
 import Alert from "./Alert";
 import { useState, useEffect } from "react";
 
-
 import { useRef } from "react";
 function Contact() {
-  const env = import.meta.env
+  const env = import.meta.env;
   const [showAlert, setShowAlert] = useState(false);
   const captchaRef: any = useRef(null);
   const { isLoading, response, submit } = useSubmit();
@@ -46,15 +45,15 @@ function Contact() {
     }
     setTimeout(() => setShowAlert(false), 3000);
   }, [response]);
-  
+
   const disablButton = Object.keys(formik.errors).length != 0 || isLoading;
   return (
     <div className="relative flex flex-col justify-center items-center mt-[140px]">
       <div className="h-20">
-      <AnimatePresence>
-        {showAlert && <Alert response={response} />}
-      </AnimatePresence>
-</div>
+        <AnimatePresence>
+          {showAlert && <Alert response={response} />}
+        </AnimatePresence>
+      </div>
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -90,7 +89,7 @@ function Contact() {
           e.preventDefault();
           formik.handleSubmit(e);
         }}
-        className="flex flex-col gap-4"
+        className="flex flex-col gap-4   justify-center items-center"
       >
         <motion.div
           initial={{ y: 50, opacity: 0 }}
@@ -102,7 +101,7 @@ function Contact() {
           }}
           className="flex gap-4"
         >
-          <span className="relative flex flex-col">
+          <span className="relative flex flex-col w-[200px] pl-10 sm:w-full sm:p-0">
             <input
               className="  peer focus:outline-none bg-transparent border-b-2 border-slate-400"
               type="text"
@@ -124,7 +123,7 @@ function Contact() {
               </div>
             ) : null}
           </span>
-          <span className="flex flex-col">
+          <span className="flex flex-col w-[200px] pr-10 sm:w-full sm:p-0">
             <input
               className="peer focus:outline-none bg-transparent border-b-2 border-slate-400"
               type="text"
@@ -155,7 +154,7 @@ function Contact() {
             type: "tween",
             ease: "easeIn",
           }}
-          className=" flex flex-col"
+          className=" flex flex-col w-[400px] p-10 sm:w-full sm:p-0"
         >
           <textarea
             className=" focus:outline-none peer bg-transparent border-b-2 border-slate-400"
@@ -190,8 +189,8 @@ function Contact() {
           disabled={disablButton}
           className={
             disablButton
-              ? "bg-green-200 rounded-full py-1 text-darkgray flex justify-center items-center"
-              : "bg-green-400 rounded-full py-1 text-darkgray hover:text-green-400 hover:bg-darkgray border-2 border-green-400 hover:scale-90 transition duration-300  ease-in flex justify-center items-center"
+              ? "bg-green-200 rounded-full py-1 text-darkgray flex justify-center items-center w-[250px]"
+              : "bg-green-400 rounded-full py-1 text-darkgray hover:text-green-400 hover:bg-darkgray border-2 border-green-400 hover:scale-90 transition duration-300  ease-in flex justify-center items-center w-[250px]"
           }
         >
           {isLoading ? (
